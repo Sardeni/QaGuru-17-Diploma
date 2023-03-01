@@ -7,30 +7,23 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
 
-    public String headerText = "Дебетовая карта, которую рекомендуют ваши друзья",
+    public String headerText = "Дебетовая карта, которую рекомендуют ваши друзья";
+    public String getCardHeaderText = "Получите Tinkoff Black уже сегодня";
 
-      panelSlideDebitCardsLink = "https://www.tinkoff.ru/cards/debit-cards/?internal_source=home_icon",
-              panelSlideCreditCardsLink = "https://www.tinkoff.ru/cards/debit-cards/?internal_source=home_icon",
-              panelSlideCreditsLink = "https://www.tinkoff.ru/loans/?internal_source=home_icon",
-      getCardTodayText = "Получите Tinkoff Black уже сегодня";
     public SelenideElement
-            logo = $("[data-test=\"logo\"]"),
-            menuItemForYou = $("[data-test=menu-item-0-title]"),
-            menuItemForBusiness = $("[data-test=menu-item-1-title]"),
-            menuItemPremium = $("[data-test=menu-item-2-title]"),
-            cardNameHeader = $("h1[data-test=\"htmlTag title\"]"),
 
-    getCardButton = $("[data-test=\"htmlTag button\"]"),
-            panelSlideDebitCards = $("[data-schema-path=\"0\"][data-test=\"item\"]").$("a"),
-            panelSlideCreditCards = $("[data-schema-path=\"1\"][data-test=\"item\"]").$("a"),
-            panelSlideCredits = $("[data-schema-path=\"2\"][data-test=\"item\"]").$("a"),
-            panelSlideDeposits = $("[data-schema-path=\"3\"][data-test=\"item\"]").$("a"),
-            panelSlideInvestments = $("[data-schema-path=\"4\"][data-test=\"item\"]").$("a"),
-            panelSlideSimCards = $("[data-schema-path=\"5\"][data-test=\"item\"]").$("a"),
-            panelSlideInsurance = $("[data-schema-path=\"6\"][data-test=\"item\"]").$("a"),
-            panelSlideTravels = $("[data-schema-path=\"7\"][data-test=\"item\"]").$("a"),
-            panelSlideBusiness = $("[data-schema-path=\"8\"][data-test=\"item\"]").$("a");
+            mainHeader = $("h1[data-test=\"htmlTag title\"]"),
 
+    mainMenuItemsBank = $("a[href=\"/\"][data-qa-type=\"uikit/navigation.menuItem\"]"),
+            mainMenuItemsCashRegister = $("a[href=\"/kassa/\"][data-qa-type=\"uikit/navigation.menuItem\"]"),
+            mainMenuItemsInvest = $("a[href=\"/invest/\"][data-qa-type=\"uikit/navigation.menuItem\"]"),
+            mainMenuItemsSim = $("a[href=\"/mobile-operator/\"][data-qa-type=\"uikit/navigation.menuItem\"]"),
+            mainMenuItemsInsurance = $("a[href=\"/insurance/\"][data-qa-type=\"uikit/navigation.menuItem\"]"),
+            mainMenuItemsTravel = $("a[href=\"/travel/\"][data-qa-type=\"uikit/navigation.menuItem\"]"),
+            mainMenuItemsCity = $("a[href=\"/gorod/\"][data-qa-type=\"uikit/navigation.menuItem\"]"),
+            gettingCardForm = $("#form"),
+            creditCardsPage = $("[href=\"/cards/credit-cards/\"][data-qa-type=\"uikit/navigation.menuItem\"]"),
+            debitCardsPage = $("[href=\"/cards/debit-cards/\"][data-qa-type=\"uikit/navigation.menuItem\"]");
 
     public MainPage checkElementText(SelenideElement element, String text) {
         element.shouldHave(text(text));
@@ -43,7 +36,12 @@ public class MainPage {
     }
 
     public MainPage checkVisibility(SelenideElement element) {
-        element.shouldBe(visible);
+        element.shouldNotBe(visible);
+        return this;
+    }
+
+    public MainPage clickOnElementPage(SelenideElement element) {
+        element.click();
         return this;
     }
 

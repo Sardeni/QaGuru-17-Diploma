@@ -3,6 +3,8 @@ package ru.tinkoff.tests.web;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import ru.tinkoff.helpers.Attach;
+import ru.tinkoff.pages.CreditCards;
+import ru.tinkoff.pages.DebitCards;
 import ru.tinkoff.pages.MainPage;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -13,6 +15,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class TestBase {
 
     MainPage mainPage = new MainPage();
+    CreditCards creditCards = new CreditCards();
+    DebitCards debitCards = new DebitCards();
 
     @BeforeAll
     static void beforeAll() {
@@ -20,9 +24,9 @@ public class TestBase {
         Configuration.browserVersion = System.getProperty("browserVersion");
         Configuration.browser = System.getProperty("browserName", "chrome");
         Configuration.pageLoadStrategy = "eager";
-        Configuration.baseUrl = " https://www.tinkoff.ru";
+        Configuration.baseUrl = "https://www.tinkoff.ru";
         Configuration.remote = System.getProperty("remoteURL");
-        Configuration.timeout=30000;
+        Configuration.timeout = 30000;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
