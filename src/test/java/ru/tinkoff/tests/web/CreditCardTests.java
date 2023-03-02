@@ -25,7 +25,7 @@ public class CreditCardTests extends TestBase {
     public void checkingHeadersParametrized(String value, String inputValue) {
         open("/cards/credit-cards/");
         $("[data-qa-type=\"uikit/slider.point\"][data-value=\"" + value + "\"]").click();
-        creditCards.checkElementAttribute(creditCards.sliderInput, "value", inputValue);
+        creditCardsPage.checkElementAttribute(creditCardsPage.sliderInput, "value", inputValue);
     }
 
 

@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static io.qameta.allure.SeverityLevel.NORMAL;
 
-public class DebitCardsTests extends TestBase {
+public class DebitCardsPageTests extends TestBase {
 
     @Test
     @Tag("regress")
@@ -18,13 +18,13 @@ public class DebitCardsTests extends TestBase {
         open("/cards/debit-cards/");
 
         step("Click on FIO input", () -> {
-            debitCards.click(debitCards.fioInput);
+            debitCardsPage.click(debitCardsPage.fioInput);
         });
         step("Choosing a random item of cashback", () -> {
-            debitCards.click(debitCards.emailInput);
+            debitCardsPage.click(debitCardsPage.emailInput);
         });
         step("Checking text in warning", () -> {
-            debitCards.checkElementText(debitCards.warningBlock, debitCards.warningFillFioFieldText);
+            debitCardsPage.checkElementText(debitCardsPage.warningBlock, debitCardsPage.warningFillFioFieldText);
         });
     }
 
@@ -37,13 +37,13 @@ public class DebitCardsTests extends TestBase {
         open("/cards/debit-cards/");
 
         step("Click on FIO input", () -> {
-            debitCards.click(debitCards.phoneInput);
+            debitCardsPage.click(debitCardsPage.phoneInput);
         });
         step("Choosing a random item of cashback", () -> {
-            debitCards.click(debitCards.emailInput);
+            debitCardsPage.click(debitCardsPage.emailInput);
         });
         step("Checking text in warning", () -> {
-            debitCards.checkElementText(debitCards.warningBlock, debitCards.warningFillPhoneFieldText);
+            debitCardsPage.checkElementText(debitCardsPage.warningBlock, debitCardsPage.warningFillPhoneFieldText);
         });
     }
 
@@ -56,13 +56,13 @@ public class DebitCardsTests extends TestBase {
         open("/cards/debit-cards/");
 
         step("Click on FIO input", () -> {
-            debitCards.click(debitCards.dateOfBirthInput);
+            debitCardsPage.click(debitCardsPage.dateOfBirthInput);
         });
         step("Choosing a random item of cashback", () -> {
-            debitCards.click(debitCards.emailInput);
+            debitCardsPage.click(debitCardsPage.emailInput);
         });
         step("Checking text in warning", () -> {
-            debitCards.checkElementText(debitCards.warningBlock, debitCards.warningFillDateOfBirthFieldText);
+            debitCardsPage.checkElementText(debitCardsPage.warningBlock, debitCardsPage.warningFillDateOfBirthFieldText);
         });
     }
 

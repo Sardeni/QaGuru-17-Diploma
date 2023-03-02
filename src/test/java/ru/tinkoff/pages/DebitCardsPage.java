@@ -5,7 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 
-public class DebitCards {
+public class DebitCardsPage {
 
     public String warningFillFioFieldText = "Укажите фамилию, имя и отчество через пробел";
     public String warningFillPhoneFieldText = "Укажите номер телефона";
@@ -18,28 +18,18 @@ public class DebitCards {
             dateOfBirthInput = $("[data-field-name=\"birthdate\"]"),
             warningBlock = $("[data-qa-type=\"uikit/formRow.errorBlock\"]");
 
-    public DebitCards checkElementText(SelenideElement element, String text) {
+    public DebitCardsPage checkElementText(SelenideElement element, String text) {
         element.shouldHave(text(text));
         return this;
     }
 
-    public DebitCards checkElementAttribute(SelenideElement element, String attirbuteType, String attirbuteValue) {
+    public DebitCardsPage checkElementAttribute(SelenideElement element, String attirbuteType, String attirbuteValue) {
         element.shouldHave(attribute(attirbuteType, attirbuteValue));
         return this;
     }
 
-    public DebitCards checkVisibility(SelenideElement element) {
-        element.shouldNotBe(visible);
-        return this;
-    }
-
-    public DebitCards click(SelenideElement element) {
+    public DebitCardsPage click(SelenideElement element) {
         element.click();
-        return this;
-    }
-
-    public DebitCards pressESC(SelenideElement element) {
-        element.pressEscape();
         return this;
     }
 }

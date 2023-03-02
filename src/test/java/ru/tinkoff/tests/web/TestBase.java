@@ -3,8 +3,9 @@ package ru.tinkoff.tests.web;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import ru.tinkoff.helpers.Attach;
-import ru.tinkoff.pages.CreditCards;
-import ru.tinkoff.pages.DebitCards;
+import ru.tinkoff.pages.CreditCardsPage;
+import ru.tinkoff.pages.DebitCardsPage;
+import ru.tinkoff.pages.InvestPage;
 import ru.tinkoff.pages.MainPage;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -15,8 +16,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class TestBase {
 
     MainPage mainPage = new MainPage();
-    CreditCards creditCards = new CreditCards();
-    DebitCards debitCards = new DebitCards();
+    CreditCardsPage creditCardsPage = new CreditCardsPage();
+    DebitCardsPage debitCardsPage = new DebitCardsPage();
+    InvestPage investPage = new InvestPage();
 
     @BeforeAll
     static void beforeAll() {
