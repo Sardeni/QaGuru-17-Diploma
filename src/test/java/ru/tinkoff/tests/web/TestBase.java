@@ -1,6 +1,7 @@
 package ru.tinkoff.tests.web;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import ru.tinkoff.helpers.Attach;
 import ru.tinkoff.pages.CreditCardsPage;
@@ -47,5 +48,6 @@ public class TestBase {
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
+        Selenide.closeWindow();
     }
 }
