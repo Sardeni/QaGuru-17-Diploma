@@ -1,9 +1,10 @@
 # Проект по автоматизации тестирования сайта tinkoff.ru
 
+<br>
 <p align="center">
 <img width="60%" title="Tinkoff" src="images/logo/tinkoffLogo.png">
 </p>
-<br><br>
+<br>
 
 ## :pushpin: Содержание:
 
