@@ -1,8 +1,10 @@
 # Проект по автоматизации тестирования сайта tinkoff.ru
+
 <p align="center">
 <img width="60%" title="Tinkoff" src="images/logo/tinkoffLogo.png">
 </p>
 <br><br>
+
 ## :pushpin: Содержание:
 
 - [Использованный стек технологий](#computer-использованный-стек-технологий)
