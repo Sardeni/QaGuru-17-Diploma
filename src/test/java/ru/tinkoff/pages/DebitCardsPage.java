@@ -23,11 +23,6 @@ public class DebitCardsPage {
         return this;
     }
 
-    public DebitCardsPage checkElementAttribute(SelenideElement element, String attirbuteType, String attirbuteValue) {
-        element.shouldHave(attribute(attirbuteType, attirbuteValue));
-        return this;
-    }
-
     public DebitCardsPage click(SelenideElement element) {
         element.click();
         return this;
