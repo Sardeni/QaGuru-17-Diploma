@@ -13,6 +13,7 @@
 - [Запуск тестов](#running_woman-запуск-тестов)
 - [Сборка в Jenkins](#-сборка-в-jenkins)
 - [Пример Allure-отчета](#-пример-allure-отчета)
+- [Интеграция с Allure TestOps](#-интеграция-с-allure-testops)
 - [Уведомления в Telegram с использованием бота](#-уведомления-в-telegram-с-использованием-бота)
 - [Видео примера запуска теста в Selenoid](#-видео-примера-запуска-теста-в-selenoid)
 
@@ -88,7 +89,7 @@ test/smoke/regress - запуск всех тестов/только smoke/то�
 ### Параметры сборки
 
 * <code>browserName</code> – браузер, в котором будут выполняться тесты. По-умолчанию - <code>chrome</code>.
-* <code>browserVersion</code> – версия браузера, в которой будут выполняться тесты. По-умолчанию - <code>105.0</code>.
+* <code>browserVersion</code> – версия браузера, в которой будут выполняться тесты.
 * <code>browserSize</code> – размер окна браузера, в котором будут выполняться тесты.  По-умолчанию - <code>1920x1080</code>.
 * <code>remoteURL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 
@@ -109,6 +110,28 @@ test/smoke/regress - запуск всех тестов/только smoke/то�
 <p align="center">
 <img title="Test Results in Alure" src="images/screenshots/allureReportTests.png">
 </p>
+
+## <img width="4%" title="Allure TestOPS" src="images/logo/allureTestOps.svg"> Интеграция с [Allure TestOps](https://qameta.io/)
+
+### Основной дашборд
+
+<p align="center">
+  <img src="images/screenshots/allureReportMain.png" alt="dashboard" width="900">
+</p>
+
+### Список тестов с результатами прогона
+
+<p align="center">
+  <img src="images/screenshots/AllureTestOpsResults.png" alt="dashboard" width="900">
+</p>
+
+### Тест-кейсы
+
+<p align="center">
+  <img src="images/screenshots/AllureTestOpsTestCases.png" alt="testcase" width="900">
+</p>
+
+
 
 ### <img width="4%" style="vertical-align:middle" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
 
