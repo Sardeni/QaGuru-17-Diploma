@@ -116,7 +116,7 @@ test/smoke/regress - запуск всех тестов/только smoke/то�
 ### Основной дашборд
 
 <p align="center">
-  <img src="images/screenshots/allureReportMain.png" alt="dashboard" width="900">
+  <img src="images/screenshots/AllureTestOpsMain.png" alt="dashboard" width="900">
 </p>
 
 ### Список тестов с результатами прогона
