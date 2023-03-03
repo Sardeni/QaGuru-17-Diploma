@@ -14,13 +14,14 @@ public class DebitCardsPageTests extends TestBase {
     @DisplayName("Checking warning for required field FIO at form")
     @Owner("emelianovam")
     @Severity(NORMAL)
+    @Feature("Debit card form")
     public void checkingFioInputValidation() {
         open("/cards/debit-cards/");
 
         step("Click on FIO input", () -> {
             debitCardsPage.click(debitCardsPage.fioInput);
         });
-        step("Choosing a random item of cashback", () -> {
+        step("Choosing another input", () -> {
             debitCardsPage.click(debitCardsPage.emailInput);
         });
         step("Checking text in warning", () -> {
@@ -30,16 +31,17 @@ public class DebitCardsPageTests extends TestBase {
 
     @Test
     @Tag("regress")
-    @DisplayName("Checking warning for required field FIO at form")
+    @DisplayName("Checking warning for required field phone at form")
     @Owner("emelianovam")
     @Severity(NORMAL)
+    @Feature("Debit card form")
     public void checkingPhoneInputValidation() {
         open("/cards/debit-cards/");
 
-        step("Click on FIO input", () -> {
+        step("Click on phone input", () -> {
             debitCardsPage.click(debitCardsPage.phoneInput);
         });
-        step("Choosing a random item of cashback", () -> {
+        step("Choosing another input", () -> {
             debitCardsPage.click(debitCardsPage.emailInput);
         });
         step("Checking text in warning", () -> {
@@ -52,13 +54,14 @@ public class DebitCardsPageTests extends TestBase {
     @DisplayName("Checking warning for required field Date of birth at form")
     @Owner("emelianovam")
     @Severity(NORMAL)
+    @Feature("Debit card form")
     public void checkingDateOfBirthInputValidation() {
         open("/cards/debit-cards/");
 
-        step("Click on FIO input", () -> {
+        step("Click on Date of birth input", () -> {
             debitCardsPage.click(debitCardsPage.dateOfBirthInput);
         });
-        step("Choosing a random item of cashback", () -> {
+        step("Choosing another input", () -> {
             debitCardsPage.click(debitCardsPage.emailInput);
         });
         step("Checking text in warning", () -> {

@@ -13,6 +13,7 @@ public class InvestPageTests extends TestBase {
     @DisplayName("Checking menu items")
     @Owner("emelianovam")
     @Severity(NORMAL)
+    @Feature("InvestPage menu")
     public void checkingMenuItems() {
         open("/invest/");
 
@@ -30,6 +31,7 @@ public class InvestPageTests extends TestBase {
     @DisplayName("Checking validation on the form")
     @Owner("emelianovam")
     @Severity(NORMAL)
+    @Feature("Contact data form")
     public void checkingValidationOnTheForm() {
         open("/invest/");
 

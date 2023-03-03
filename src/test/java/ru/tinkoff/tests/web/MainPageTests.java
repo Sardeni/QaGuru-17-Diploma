@@ -1,5 +1,6 @@
 package ru.tinkoff.tests.web;
 
+import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import org.junit.jupiter.api.*;
@@ -15,6 +16,7 @@ public class MainPageTests extends TestBase {
     @DisplayName("Checking items on main page")
     @Owner("emelianovam")
     @Severity(CRITICAL)
+    @Feature("Main page items")
     public void checkingPageItems() {
 
         open("/");

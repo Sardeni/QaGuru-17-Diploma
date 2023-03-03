@@ -1,7 +1,12 @@
-# Проект по автоматизации тестирования страницы вакансии на hh.ru
+# Проект по автоматизации тестирования сайта tinkoff.ru
+<p align="center">
+<img width="60%" title="Tinkoff" src="images/logo/tinkoffLogo.png">
+</p>
+<br><br>
 ## :pushpin: Содержание:
 
 - [Использованный стек технологий](#computer-использованный-стек-технологий)
+- [Реализованные проверки](#computer-реализованные-проверки)
 - [Запуск тестов](#running_woman-запуск-тестов)
 - [Сборка в Jenkins](#-сборка-в-jenkins)
 - [Пример Allure-отчета](#-пример-allure-отчета)
@@ -16,10 +21,12 @@
 <img width="6%" title="Selenide" src="images/logo/Selenide.svg">
 <img width="6%" title="Selenoid" src="images/logo/Selenoid.svg">
 <img width="6%" title="Allure Report" src="images/logo/Allure_Report.svg">
+<img width="5%" title="Allure TestOps" src="images/logo/allureTestOps.svg">
 <img width="6%" title="Gradle" src="images/logo/Gradle.svg">
 <img width="6%" title="JUnit5" src="images/logo/JUnit5.svg">
 <img width="6%" title="GitHub" src="images/logo/GitHub.svg">
 <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
+<img width="6%" title="Jira" src="images/logo/Jira.svg">
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">
 </p>
 
@@ -35,6 +42,15 @@ Allure-отчет включает в себя:
 * логи браузерной консоли;
 * видео выполнения автотеста.
 
+## Реализованные проверки
+
+- [x] *Проверка заголовка главной страницы*
+- [x] *Проверка пунктов основного меню*
+- [x] *Проверка наличия формы оформления карты на главной странице*
+- [x] *Проверка работы изменения суммы кредита в форме оформления кредитной карты*
+- [x] *Проверка валидации формы получения дебетовой карты на пустое поле*
+- [x] *Проверка валидаации формы "Контактная информация на странице инвестиций*
+
 ## :running_woman: Запуск тестов
 
 ### Локальный запуск тестов
@@ -45,7 +61,7 @@ gradle clean test
 При необходимости можно переопределить параметры запуска
 ```
 gradle clean 
-test/smoke_tests/regress_tests - запуск всех тестов/только smoke/только regress
+test/smoke/regress - запуск всех тестов/только smoke/только regress
 -Dbrowser=${browserName}
 -DbrowserVersion=${browserVersion}
 -DbrowserSize=${browserSize}
@@ -59,7 +75,7 @@ gradle clean test
 
 ```
 gradle clean
-test/smoke_tests/regress_tests - запуск всех тестов/только smoke/только regress
+test/smoke/regress - запуск всех тестов/только smoke/только regress
 -DbrowserVersion=${browserVersion}
 -DbrowserSize=${browserSize}
 -DremoteUrl=${remoteURL}
