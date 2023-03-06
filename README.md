@@ -141,6 +141,11 @@ test/smoke/regress - запуск всех тестов/только smoke/то�
 <img width="70%" title="Telegram Notifications" src="images/screenshots/notificationExample.png">
 </p>
 
+# Интеграция с Jira
+<p align="center">
+  <img src="images/screens/JiraTinkoff.png" alt="JiraIntegration" width="950">
+</p>
+
 ### <img width="4%" style="vertical-align:middle" title="Selenoid" src="images/logo/Selenoid.svg"> Видео примера запуска теста в Selenoid
 
 К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
