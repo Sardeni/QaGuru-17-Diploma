@@ -143,7 +143,7 @@ test/smoke/regress - запуск всех тестов/только smoke/то�
 
 # Интеграция с Jira
 <p align="center">
-  <img src="images/screens/JiraTinkoff.png" alt="JiraIntegration" width="950">
+  <img src="images/screenshots/JiraTinkoff.png" alt="JiraIntegration" width="950">
 </p>
 
 ### <img width="4%" style="vertical-align:middle" title="Selenoid" src="images/logo/Selenoid.svg"> Видео примера запуска теста в Selenoid
