@@ -15,7 +15,6 @@ public class CreditCardsPage {
         element.shouldHave(attribute(attirbuteType, attirbuteValue));
         return this;
     }
-
 }
 
 

@@ -20,10 +20,12 @@ public class MainPage {
             mainMenuItemsTravel = $("a[href=\"/travel/\"][data-qa-type=\"uikit/navigation.menuItem\"]"),
             mainMenuItemsCity = $("a[href=\"/gorod/\"][data-qa-type=\"uikit/navigation.menuItem\"]"),
             gettingCardForm = $("#form");
+
     public MainPage checkElementText(SelenideElement element, String text) {
         element.shouldHave(text(text));
         return this;
     }
+
     public MainPage checkVisibility(SelenideElement element) {
         element.shouldNotBe(visible);
         return this;

@@ -3,16 +3,16 @@ package ru.tinkoff.tests.web;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import ru.tinkoff.helpers.Attach;
-import ru.tinkoff.pages.CreditCardsPage;
-import ru.tinkoff.pages.DebitCardsPage;
-import ru.tinkoff.pages.InvestPage;
-import ru.tinkoff.pages.MainPage;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import ru.tinkoff.helpers.Attach;
+import ru.tinkoff.pages.CreditCardsPage;
+import ru.tinkoff.pages.DebitCardsPage;
+import ru.tinkoff.pages.InvestPage;
+import ru.tinkoff.pages.MainPage;
 
 public class TestBase {
 

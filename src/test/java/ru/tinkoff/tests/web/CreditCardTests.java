@@ -24,11 +24,9 @@ public class CreditCardTests extends TestBase {
     @Owner("emelianovam")
     @Severity(NORMAL)
     @Feature("Credit card form")
-   public void checkingHeadersParametrized(String value, String inputValue) {
+    public void checkingHeadersParametrized(String value, String inputValue) {
         open("/cards/credit-cards/");
         $("[data-qa-type=\"uikit/slider.point\"][data-value=\"" + value + "\"]").click();
         creditCardsPage.checkElementAttribute(creditCardsPage.sliderInput, "value", inputValue);
     }
-
-
 }

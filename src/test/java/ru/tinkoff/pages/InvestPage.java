@@ -1,10 +1,11 @@
 package ru.tinkoff.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.ex.ElementIsNotClickableException;
 
-import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Condition.disabled;
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 
 public class InvestPage {
     public SelenideElement
@@ -17,9 +18,9 @@ public class InvestPage {
             menuItemScreener = $("[href=\"/invest/stock-screener/\"][data-qa-type=\"uikit/navigation.menuItem\"]"),
             menuItemTerminal = $("[href=\"/invest/web-terminal/\"][data-qa-type=\"uikit/navigation.menuItem\"]"),
             contactFormFioLabel = $("[data-qa-type=\"uikit/inputFio.inputBox.label\"]"),
-             contactFormFio = $("[data-qa-type=\"uikit/inputFio.inputBox uikit/inputFio.inputBox_required\"]"),
+            contactFormFio = $("[data-qa-type=\"uikit/inputFio.inputBox uikit/inputFio.inputBox_required\"]"),
             contactFormFioInput = $("[data-qa-type=\"uikit/inputFio.value.input\"]"),
-    contactFormMobilePhoneLabel = $("[data-qa-type=\"uikit/input\"]").$("span"),
+            contactFormMobilePhoneLabel = $("[data-qa-type=\"uikit/input\"]").$("span"),
             contactFormMobilePhoneInput = $("[data-qa-type=\"uikit/input\"]").$("input"),
             contactFormFurtherButton = $("[data-qa-file=\"auth\"][data-qa-type=\"uikit/button\"]");
 

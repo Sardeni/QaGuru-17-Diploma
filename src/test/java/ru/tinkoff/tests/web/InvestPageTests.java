@@ -1,15 +1,21 @@
 package ru.tinkoff.tests.web;
 
-import io.qameta.allure.*;
-import org.junit.jupiter.api.*;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.sleep;
 import static io.qameta.allure.Allure.step;
 import static io.qameta.allure.SeverityLevel.NORMAL;
 
 public class InvestPageTests extends TestBase {
     @Test
     @Tag("regress")
+    @Tag("smoke")
     @DisplayName("Checking menu items")
     @Owner("emelianovam")
     @Severity(NORMAL)

@@ -1,4 +1,3 @@
-
 package ru.tinkoff.helpers;
 
 import com.codeborne.selenide.Selenide;
