@@ -23,13 +23,13 @@ public class InvestPageTests extends TestBase {
     public void checkingMenuItems() {
         open("/invest/");
 
-        investPage.checkElementText(investPage.menuItemReview, "Обзор");
-        investPage.checkElementText(investPage.menuItemCatalog, "Каталог");
-        investPage.checkElementText(investPage.menuItemPulse, "Пульс");
-        investPage.checkElementText(investPage.menuItemAnalytics, "Аналитика");
-        investPage.checkElementText(investPage.menuItemAcademy, "Академия");
-        investPage.checkElementText(investPage.menuItemScreener, "Скринер");
-        investPage.checkElementText(investPage.menuItemTerminal, "Терминал");
+        investPage.checkElementText(investPage.menuItemReview, "Обзор")
+                .checkElementText(investPage.menuItemCatalog, "Каталог")
+                .checkElementText(investPage.menuItemPulse, "Пульс")
+                .checkElementText(investPage.menuItemAnalytics, "Аналитика")
+                .checkElementText(investPage.menuItemAcademy, "Академия")
+                .checkElementText(investPage.menuItemScreener, "Скринер")
+                .checkElementText(investPage.menuItemTerminal, "Терминал");
     }
 
     @Test
@@ -43,19 +43,19 @@ public class InvestPageTests extends TestBase {
 
 
         step("Checking initial form condition", () -> {
-            investPage.hover(investPage.contactFormFurtherButton);
-            investPage.checkElementText(investPage.contactFormFioLabel, "Фамилия, имя и отчество");
-            investPage.checkElementText(investPage.contactFormMobilePhoneLabel, "Мобильный телефон");
-            investPage.elementIsDisabled(investPage.contactFormFurtherButton);
+            investPage.hover(investPage.contactFormFurtherButton)
+                    .checkElementText(investPage.contactFormFioLabel, "Фамилия, имя и отчество")
+                    .checkElementText(investPage.contactFormMobilePhoneLabel, "Мобильный телефон")
+                    .elementIsDisabled(investPage.contactFormFurtherButton);
         });
 
         step("Fill inputs in form", () -> {
-            investPage.hover(investPage.contactFormFio).click(investPage.contactFormFio);
-            investPage.inputData(investPage.contactFormFioInput, "Иванов Семен Петрович");
+            investPage.hover(investPage.contactFormFio).click(investPage.contactFormFio)
+                    .inputData(investPage.contactFormFioInput, "Иванов Семен Петрович");
             sleep(2000);
-            investPage.hover(investPage.contactFormMobilePhoneInput).click(investPage.contactFormMobilePhoneInput);
-            investPage.inputData(investPage.contactFormMobilePhoneInput, "9174583696");
-            investPage.elementIsNotDisabled(investPage.contactFormFurtherButton);
+            investPage.hover(investPage.contactFormMobilePhoneInput).click(investPage.contactFormMobilePhoneInput)
+                    .inputData(investPage.contactFormMobilePhoneInput, "9174583696")
+                    .elementIsNotDisabled(investPage.contactFormFurtherButton);
         });
 
         step("Check the button is not disabled", () -> {

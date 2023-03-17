@@ -7,9 +7,9 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class DebitCardsPage {
 
-    public String warningFillFioFieldText = "Укажите фамилию, имя и отчество через пробел";
-    public String warningFillPhoneFieldText = "Укажите номер телефона";
-    public String warningFillDateOfBirthFieldText = "Укажите дату рождения";
+    public String warningFillFioFieldText = "Укажите фамилию, имя и отчество через пробел",
+            warningFillPhoneFieldText = "Укажите номер телефона",
+            warningFillDateOfBirthFieldText = "Укажите дату рождения";
     public SelenideElement
 
             fioInput = $("[data-qa-type=\"uikit/inputFio.inputBox uikit/inputFio.inputBox_required\"]"),

@@ -29,13 +29,13 @@ public class MainPageTests extends TestBase {
         });
 
         step("Checking main menu items text", () -> {
-            mainPage.checkElementText(mainPage.mainMenuItemsBank, "Банк");
-            mainPage.checkElementText(mainPage.mainMenuItemsCashRegister, "Касса");
-            mainPage.checkElementText(mainPage.mainMenuItemsInvest, "Инвестиции");
-            mainPage.checkElementText(mainPage.mainMenuItemsSim, "Сим-карта");
-            mainPage.checkElementText(mainPage.mainMenuItemsInsurance, "Страхование");
-            mainPage.checkElementText(mainPage.mainMenuItemsTravel, "Путешествия");
-            mainPage.checkElementText(mainPage.mainMenuItemsCity, "Город");
+            mainPage.checkElementText(mainPage.mainMenuItemsBank, "Банк")
+                    .checkElementText(mainPage.mainMenuItemsCashRegister, "Касса")
+                    .checkElementText(mainPage.mainMenuItemsInvest, "Инвестиции")
+                    .checkElementText(mainPage.mainMenuItemsSim, "Сим-карта")
+                    .checkElementText(mainPage.mainMenuItemsInsurance, "Страхование")
+                    .checkElementText(mainPage.mainMenuItemsTravel, "Путешествия")
+                    .checkElementText(mainPage.mainMenuItemsCity, "Город");
         });
 
         step("Checking getting card form visibility", () -> {
