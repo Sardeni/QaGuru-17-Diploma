@@ -11,6 +11,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.SeverityLevel.NORMAL;
 
+@Owner("emelianovam")
 public class CreditCardTests extends TestBase {
 
     @ParameterizedTest(name = "Checking сredit value: {1} after choosing slider: {0}")
@@ -21,12 +22,11 @@ public class CreditCardTests extends TestBase {
             "700000, 700 000 ₽"
     })
     @Tag("regress")
-    @Owner("emelianovam")
     @Severity(NORMAL)
     @Feature("Credit card form")
     public void checkingHeadersParametrized(String value, String inputValue) {
         open("/cards/credit-cards/");
-        $("[data-qa-type=\"uikit/slider.point\"][data-value=\"" + value + "\"]").click();
+        $("[data-qa-type='uikit/slider.point'][data-value='" + value + "']").click();
         creditCardsPage.checkElementAttribute(creditCardsPage.sliderInput, "value", inputValue);
     }
 }

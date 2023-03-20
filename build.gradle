@@ -16,8 +16,10 @@ def allureVersion = "2.21.0"
 dependencies {
 
     testImplementation(
-            "com.codeborne:selenide:6.11.0",
+            "com.codeborne:selenide:6.12.3",
             "org.junit.jupiter:junit-jupiter:5.9.2",
+            "org.aeonbits.owner:owner:1.0.12",
+            "org.assertj:assertj-core:3.23.1",
             "io.qameta.allure:allure-selenide:$allureVersion",
     )
 

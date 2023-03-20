@@ -11,13 +11,13 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 import static io.qameta.allure.SeverityLevel.NORMAL;
 
+@Owner("emelianovam")
+@Tag("regress")
 public class DebitCardsPageTests extends TestBase {
 
     @Test
-    @Tag("regress")
     @Tag("smoke")
     @DisplayName("Checking warning for required field FIO at form")
-    @Owner("emelianovam")
     @Severity(NORMAL)
     @Feature("Debit card form")
     public void checkingFioInputValidation() {
@@ -35,9 +35,7 @@ public class DebitCardsPageTests extends TestBase {
     }
 
     @Test
-    @Tag("regress")
     @DisplayName("Checking warning for required field phone at form")
-    @Owner("emelianovam")
     @Severity(NORMAL)
     @Feature("Debit card form")
     public void checkingPhoneInputValidation() {
@@ -55,9 +53,7 @@ public class DebitCardsPageTests extends TestBase {
     }
 
     @Test
-    @Tag("regress")
     @DisplayName("Checking warning for required field Date of birth at form")
-    @Owner("emelianovam")
     @Severity(NORMAL)
     @Feature("Debit card form")
     public void checkingDateOfBirthInputValidation() {

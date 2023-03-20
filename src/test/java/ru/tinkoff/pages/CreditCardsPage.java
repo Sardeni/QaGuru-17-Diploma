@@ -9,7 +9,7 @@ public class CreditCardsPage {
 
     public SelenideElement
 
-            sliderInput = $("[data-qa-type=\"uikit/inlineInput.input\"]");
+            sliderInput = $("[data-qa-type='uikit/inlineInput.input']");
 
     public CreditCardsPage checkElementAttribute(SelenideElement element, String attirbuteType, String attirbuteValue) {
         element.shouldHave(attribute(attirbuteType, attirbuteValue));

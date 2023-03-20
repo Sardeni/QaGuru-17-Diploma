@@ -1,5 +1,6 @@
 package ru.tinkoff.helpers;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Attachment;
@@ -42,7 +43,7 @@ public class Attach {
     }
 
     public static URL getVideoUrl() {
-        String videoUrl = "https://selenoid.autotests.cloud/video/" + Selenide.sessionId() + ".mp4";
+        String videoUrl = Configuration.remote + Selenide.sessionId() + ".mp4";
 
         try {
             return new URL(videoUrl);

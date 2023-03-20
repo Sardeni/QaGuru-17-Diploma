@@ -12,12 +12,13 @@ import static com.codeborne.selenide.Selenide.sleep;
 import static io.qameta.allure.Allure.step;
 import static io.qameta.allure.SeverityLevel.NORMAL;
 
+@Owner("emelianovam")
+@Tag("regress")
+
 public class InvestPageTests extends TestBase {
     @Test
-    @Tag("regress")
     @Tag("smoke")
     @DisplayName("Checking menu items")
-    @Owner("emelianovam")
     @Severity(NORMAL)
     @Feature("InvestPage menu")
     public void checkingMenuItems() {
@@ -33,9 +34,7 @@ public class InvestPageTests extends TestBase {
     }
 
     @Test
-    @Tag("regress")
     @DisplayName("Checking validation on the form")
-    @Owner("emelianovam")
     @Severity(NORMAL)
     @Feature("Contact data form")
     public void checkingValidationOnTheForm() {

@@ -12,11 +12,11 @@ public class DebitCardsPage {
             warningFillDateOfBirthFieldText = "Укажите дату рождения";
     public SelenideElement
 
-            fioInput = $("[data-qa-type=\"uikit/inputFio.inputBox uikit/inputFio.inputBox_required\"]"),
-            emailInput = $("[data-field-name=\"email\"]"),
-            phoneInput = $("[data-field-name=\"phone_mobile\"]"),
-            dateOfBirthInput = $("[data-field-name=\"birthdate\"]"),
-            warningBlock = $("[data-qa-type=\"uikit/formRow.errorBlock\"]");
+            fioInput = $("[data-qa-type='uikit/inputFio.inputBox uikit/inputFio.inputBox_required']"),
+            emailInput = $("[data-field-name=email]"),
+            phoneInput = $("[data-field-name=phone_mobile]"),
+            dateOfBirthInput = $("[data-field-name=birthdate]"),
+            warningBlock = $("[data-qa-type=uikit/formRow.errorBlock]");
 
     public DebitCardsPage checkElementText(SelenideElement element, String text) {
         element.shouldHave(text(text));

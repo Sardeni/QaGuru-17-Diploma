@@ -7,7 +7,8 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import ru.tinkoff.config.WebDriverConfig;
+import ru.tinkoff.config.WebDriverProvider;
 import ru.tinkoff.helpers.Attach;
 import ru.tinkoff.pages.CreditCardsPage;
 import ru.tinkoff.pages.DebitCardsPage;
@@ -21,20 +22,10 @@ public class TestBase {
     DebitCardsPage debitCardsPage = new DebitCardsPage();
     InvestPage investPage = new InvestPage();
 
+
     @BeforeAll
     static void beforeAll() {
-        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
-        Configuration.browserVersion = System.getProperty("browserVersion");
-        Configuration.browser = System.getProperty("browserName", "chrome");
-        Configuration.pageLoadStrategy = "eager";
-        Configuration.baseUrl = "https://www.tinkoff.ru";
-        Configuration.remote = System.getProperty("remoteURL");
-        Configuration.timeout = 30000;
-
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
-        Configuration.browserCapabilities = capabilities;
+        WebDriverProvider.config();
     }
 
     @BeforeEach
@@ -47,7 +38,5 @@ public class TestBase {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
-        Attach.addVideo();
-        Selenide.closeWindow();
     }
 }

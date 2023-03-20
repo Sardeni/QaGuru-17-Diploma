@@ -11,13 +11,13 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 import static io.qameta.allure.SeverityLevel.CRITICAL;
 
+@Owner("emelianovam")
+@Tag("regress")
 public class MainPageTests extends TestBase {
 
     @Test
-    @Tag("regress")
     @Tag("smoke")
     @DisplayName("Checking items on main page")
-    @Owner("emelianovam")
     @Severity(CRITICAL)
     @Feature("Main page items")
     public void checkingPageItems() {
