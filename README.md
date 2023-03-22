@@ -53,45 +53,29 @@ Allure-отчет включает в себя:
 - [x] *Проверка наличия формы оформления карты на главной странице*
 - [x] *Проверка изменения суммы кредита в форме оформления кредитной карты*
 - [x] *Проверка валидации формы получения дебетовой карты на пустое поле*
-- [x] *Проверка валидаации формы "Контактная информация" на странице инвестиций*
 
 ## :running_woman: Запуск тестов
 
 ### Локальный запуск тестов
 ```
-gradle clean test
+gradle clean test -Denv=local
 ```
 
 При необходимости можно переопределить параметры запуска
 ```
-gradle clean 
 test/smoke/regress - запуск всех тестов/только smoke/только regress
--Dbrowser=${browserName}
--DbrowserVersion=${browserVersion}
--DbrowserSize=${browserSize}
+
 ```
 
 ### Запуск тестов на удаленном браузере
 ```
-gradle clean test
+gradle clean test -Denv=remote
 ```
 При необходимости также можно переопределить параметры запуска
 
 ```
-gradle clean
 test/smoke/regress - запуск всех тестов/только smoke/только regress
--Dbrowser=${browserName}
--DbrowserVersion=${browserVersion}
--DbrowserSize=${browserSize}
--DremoteUrl=${remoteURL}
 ```
-
-### Параметры сборки
-
-* <code>browserName</code> – браузер, в котором будут выполняться тесты. По-умолчанию - <code>chrome</code>.
-* <code>browserVersion</code> – версия браузера, в которой будут выполняться тесты.
-* <code>browserSize</code> – размер окна браузера, в котором будут выполняться тесты.  По-умолчанию - <code>1920x1080</code>.
-* <code>remoteURL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 
 ## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> <a href="https://jenkins.autotests.cloud/job/QaGuru17-Emelianov-Diplom-Web/"> Сборка в Jenkins</a>
 <p align="center">

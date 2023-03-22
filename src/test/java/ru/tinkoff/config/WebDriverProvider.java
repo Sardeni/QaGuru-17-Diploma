@@ -15,13 +15,10 @@ public class WebDriverProvider {
         Configuration.browser = WebDriverProvider.config.getBrowserName();
         Configuration.browserVersion = WebDriverProvider.config.getBrowserVersion();
         Configuration.pageLoadStrategy = WebDriverProvider.config.getPageLoadStrategy();
-        Configuration.timeout = 30000;
         String remoteUrl = WebDriverProvider.config.getRemoteUrl();
         if (remoteUrl != null) {
             Configuration.remote = remoteUrl;
-            Attach.addVideo();
         }
-
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
